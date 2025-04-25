@@ -31,7 +31,7 @@
         height: 100%;
 
         & h3{
-            font-size: 3em;
+            font-size: 2em;
         }
 
         & button{
@@ -193,8 +193,8 @@
         padding: 10px;
         height: 100%;
         grid-template-columns: 1fr;
-        grid-template-rows: 5fr 1fr 16fr 8fr;
-        
+        grid-template-rows: auto auto auto auto;
+        justify-items: center;
         & h2{
             padding: 0;
             text-align: center;
@@ -202,6 +202,10 @@
 
         & hr{
             margin-left: 20px ;
+        }
+
+        & ul{
+            justify-self: center;
         }
 
         & picture{
