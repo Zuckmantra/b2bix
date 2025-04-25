@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #fbba1a;
+    --thirth-color: #0b0f1d;
+    --fourth-color: #001839;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.info-banner-initial{
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../images-info/construccionBackground.webp) no-repeat center center fixed;
+    background-size: cover;
+    align-content: center;
+     
+    & h3{
+        margin-left: 0.8em;
+        font-size: 4em;
+        color: var(--primary-color);
+    } 
+
+    & button{
+        margin: 2.4em;
+    }
+    @media screen and (max-width: 890px){ 
+        height: 100%;
+
+        & h3{
+            font-size: 3em;
+        }
+
+        & button{
+            margin: 1.2em;
+        }
+        
+    }
+}
+
+.info-banner{
+    height: 50vh;
+    align-content: center;
+    margin: 3em 0 ;
+    padding: 0 4em;
+
+    & h2{
+        font-size: 3em;
+        color: var(--thirth-color);
+    }
+
+    & hr{
+        width: 50vw;
+        height: 0.3em;
+        background-color: var(--secondary-color);
+        margin: 1em 3em;
+        align-items:start;
+        border-radius: 20px;
+        border-style: none;
+    }
+
+    & p{
+        line-height: 2em;
+    }
+
+    @media screen and (max-width: 890px){ 
+        height: 100%;
+        padding: 0 2em;
+
+        & h2{
+            font-size: 2em;
+        }
+
+        & hr{
+            width: 50vw;
+            margin-right: 0;
+        }
+        
+    }
+}
+
+.info-banner-image {
+    position: relative;
+    width: 100%;
+}
+  
+  .info-banner-image img {
+    height: 12vw;
+    min-height: 80px;
+    width: 100%;
+    object-fit: cover;
+    display: block; /* para evitar espacios por línea base */
+  }
+  
+  .info-banner-image::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 100px;
+    background: url("../images/b2bix_logo.svg") no-repeat center center;
+    background-size: contain;
+    z-index: 20;
+  }
+  
+  @media screen and (max-width: 890px){ 
+    .info-banner-image::after {
+      height: 50px;
+    }
+  }
+
+.banner-specialized{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr 8fr;
+    align-items: center;
+    justify-items: center; 
+    padding: 5em 3em;
+
+    & h2{
+        font-size: 2em;
+        color: var(--thirth-color);
+        grid-area: 1 / 1 / 2 / 3;
+        justify-self: center;
+        padding-left: 1.5em;
+    }
+
+    & hr{
+        width: 70vw;
+        height: 0.3em;
+        background-color: var(--secondary-color);
+        align-items:start;
+        border-radius: 20px;
+        border-style: none;
+        grid-area: 2 / 1 / 3 / 3;
+        align-self: center;
+        justify-self: stretch; 
+    }
+
+    & ul{
+        line-height: 3em;
+        align-items: center;
+        align-self:baseline;
+        grid-area: 3 / 1 / 4 / 2 ;
+    }
+
+    & picture{
+        display: flex;
+        flex-direction: column;
+        gap: 3em;
+        width: 15vw;
+        grid-area: 2 / 2 / 4 / 3;
+        align-items: center;
+        align-self: self-start;
+        margin-top: 5em;
+        & img{
+            width: 50%;
+            object-fit: cover;
+            min-width: 80px;
+            max-width: 170px ;
+        }
+    }
+    
+    @media screen and (min-width: 1200px){ 
+        & ul{
+            line-height: 3em;
+            align-self: self-start;
+            align-items: flex-start;
+            & li{
+                font-size: 1.5em;
+            }
+        }
+        & picture{
+            margin-top: 5em;
+            gap: 3rem;
+            align-self: self-start;
+        }
+        & h2{
+            font-size: 1.5em;
+            padding-left: 0;
+        }   
+        
+    }
+
+    
+    @media screen and (max-width:890px){ 
+        padding: 10px;
+        height: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 5fr 1fr 16fr 8fr;
+        
+        & h2{
+            padding: 0;
+            text-align: center;
+        }
+
+        & hr{
+            margin-left: 20px ;
+        }
+
+        & picture{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            grid-area: 4 / 1 / 4 / 2;
+            width: 100%;
+            margin-top: 0;
+            margin: 0 1em;
+            gap: 0.5em;
+        }
+    }
+  
+   
+}
+
+.what-is-b2bix {
+    display: grid;
+    grid-template-areas:
+      "title title"
+      "line line"
+      "text image";
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    align-items: start;
+
+    & h2 {
+        grid-area: title;
+        font-size: 2rem;
+        text-align: start;
+    }
+
+    & hr {
+        grid-area: line;
+        width: 70%;
+        background-color: var(--secondary-color);
+        height: 0.4em;
+        border-radius: 20px;
+    }
+
+    & ul {
+        grid-area: text;
+        font-size: 1.1em;
+        line-height: 1.6em;
+        color: var(--thirth-color);
+        padding-left: 1.5rem;
+        list-style: disc;
+    }
+
+    & img {
+        grid-area: image;
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        object-fit: contain;
+        justify-self: center;
+      }
+
+      @media screen and (max-width: 890px) {
+          grid-template-areas:
+            "title"
+            "line"
+            "text"
+            "image";
+          grid-template-columns: 1fr;
+
+          & img{
+            width: 200px;
+          }
+      }
+  }  
+
+.table-banner-info{
+    margin: 3em;
+
+
+    & h2{
+        font-size: 2em;
+        color: var(--thirth-color);
+        padding-bottom: 1.2em;
+    }
+
+    & hr{
+        width: 70vw;
+        height: 0.3em;
+        background-color: var(--secondary-color);
+        align-items:start;
+        border-radius: 20px;
+        border-style: none;
+        margin-bottom: 2.3em;
+    }
+
+    & table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+        table-layout: auto;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+    
+    & th, & td {
+        padding: 16px;
+        border-bottom: 1px solid #ddd;
+        border: 1px solid #ccc; 
+        vertical-align: top;
+        word-wrap: break-word;
+      }
+    
+    & th {
+        font-weight: bold;
+        color: #333;
+      }
+    
+
+
+    & table tr td:nth-last-child(1) {
+        border: none;
+    }
+
+    & table tr td:first-child{
+        border-top: none;
+        border-left: none;
+    }
+    & table tr th{
+        border-top: none;
+        border-left: none;
+    }
+    & table tr:last-child td {
+        border-bottom: none;
+    }
+
+    table td:nth-child(4),
+    table th:nth-child(4) {
+        border-right: none;
+    }
+
+     .check-icon {
+        width: 20px;
+        height: 20px;
+        border: none;
+    }
+
+    & legend{
+        font-size: 1em;
+        text-align: center;
+        color: var(--thirth-color);
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+    
+    @media screen and (max-width: 890px) {
+        margin: 0.5em;
+        padding: 0;
+        & h2{
+            font-size: 1.5em;
+            padding-bottom: 0.5em;
+        }
+        & hr{
+            width: 100%;
+            margin-left: 0;
+        }
+        & table {
+            transform: scaleY(0.9);
+            transform: scaleX(0.9);
+            font-size: 0.8em; 
+            padding: 0;
+            margin: 0;
+            object-fit: contain;
+        }
+    
+        & table td:nth-child(2),
+        & table th:nth-child(2) {
+            font-size: 1em;
+        }
+
+        & th, & td{
+            padding: 5px;
+        }
+
+
+    }
+}
+
+
+
+@supports (-webkit-touch-callout: none) {
+    .banner{
+        background-attachment: scroll;
+    }
+}
+

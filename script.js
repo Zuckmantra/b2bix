@@ -21,7 +21,7 @@ class CardSection extends HTMLElement{
 customElements.define('card-section', CardSection);
 
 window.addEventListener('resize', () => {
-    const elements = document.querySelectorAll(' .third-banner, .fifth-banner, .banner-initial, .fourth-banner');
+    const elements = document.querySelectorAll(' .third-banner, .fifth-banner, .banner-initial, .fourth-banner, .info-banner-initial, .what-is-b2bix');
     elements.forEach((element) => {
         if (window.innerWidth <= 890) {
             element.classList.remove('banner'); 
