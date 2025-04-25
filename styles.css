@@ -123,6 +123,7 @@ nav{
     width: auto; 
     height: 100px;
     margin-bottom: 50px;
+    align-self: flex-start;
 }
 
 .banner-initial h3{
