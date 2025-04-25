@@ -16,7 +16,7 @@
 nav{
     display: flex;
     flex-direction: row;
-    background-color: #fbbb1a8e;
+    background-color: #fbbb1a;
     position: fixed;
     top: 3rem;
     right: 2rem;
@@ -86,9 +86,9 @@ nav{
             display: flex;
             flex-direction: column;
             position: absolute;
-            right: 4rem;
+            right: 3.3rem;
             text-align: center;
-            background-color: #fbbb1a8e;
+            background-color: #fbbb1abb;
             border-radius: 10px;
             opacity: 1;
             width: 300px;
@@ -293,7 +293,7 @@ nav{
         }
 
         & p{
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             font-weight: 100;
         }
     }
@@ -498,7 +498,7 @@ footer img:nth-child(2){
 }
 
 @supports (-webkit-touch-callout: none) {
-    .banner{
+    .banner-initial, .second-banner, .fourth-banner{
         background-attachment: scroll;
     }
 }

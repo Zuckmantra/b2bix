@@ -278,7 +278,7 @@
 
 .table-banner-info{
     margin: 3em;
-
+    justify-content: left;
 
     & h2{
         font-size: 2em;
@@ -300,6 +300,7 @@
         width: 100%;
         border-collapse: collapse;
         text-align: left;
+        justify-content: flex-start;
         table-layout: auto;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
@@ -358,6 +359,7 @@
     @media screen and (max-width: 890px) {
         margin: 0.5em;
         padding: 0;
+
         & h2{
             font-size: 1.5em;
             padding-bottom: 0.5em;
@@ -367,11 +369,14 @@
             margin-left: 0;
         }
         & table {
+            width: 100%;
+            translate: -15px;
             transform: scaleY(0.9);
             transform: scaleX(0.9);
             font-size: 0.8em; 
             padding: 0;
             margin: 0;
+            justify-content: baseline;
             object-fit: contain;
         }
     
@@ -381,7 +386,7 @@
         }
 
         & th, & td{
-            padding: 5px;
+            padding: 2px;
         }
 
 
@@ -391,7 +396,7 @@
 
 
 @supports (-webkit-touch-callout: none) {
-    .banner{
+    .info-banner-initial{
         background-attachment: scroll;
     }
 }
