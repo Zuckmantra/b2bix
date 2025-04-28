@@ -215,7 +215,7 @@
             grid-area: 4 / 1 / 4 / 2;
             width: 100%;
             margin-top: 0;
-            margin: 0 1em;
+            margin: 0;
             gap: 0.5em;
         }
     }
@@ -280,9 +280,10 @@
       }
   }  
 
-.table-banner-info{
+  .table-banner-info{
     margin: 3em;
     justify-content: left;
+    overflow-x: auto;
 
     & h2{
         font-size: 2em;
@@ -369,7 +370,6 @@
             padding-bottom: 0.5em;
         }
         & hr{
-            width: 100%;
             margin-left: 0;
         }
         & table {
@@ -390,7 +390,7 @@
         }
 
         & th, & td{
-            padding: 2px;
+            padding: 2rem;
         }
 
 

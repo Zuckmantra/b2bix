@@ -54,7 +54,7 @@ nav{
     & li a:hover{
         background-color: var(--primary-color);
         color: var(--secondary-color);
-        padding-inline: 1rem;
+        padding-inline: 0.5rem;
         border-radius: 10px;
     }
 
@@ -399,11 +399,14 @@ footer{
     display: flex;
     gap: 1.5rem;
     justify-content: space-around;
+    overflow-x: auto;
+    
 
     & section{
         display: flex;
         align-items: center;
         justify-content: center;
+        padding-top: 2rem;
 
     }
 
@@ -420,7 +423,7 @@ footer{
     @media screen and (max-width: 890px) {
         flex-direction: column;
         gap: 0;
-        padding: 2rem 0;
+        padding: 1rem 0;
         & div{
             flex-direction: column;
             gap: 1rem;
@@ -434,6 +437,13 @@ footer{
     font-size: 1.2rem;
     padding: 0 1rem;
     color: var(--secondary-color);
+}
+
+footer table td a[href="mailto:b2bixmarketing@gmail.com"]{
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    letter-spacing: -1px;
 }
 
 footer img:first-child,
